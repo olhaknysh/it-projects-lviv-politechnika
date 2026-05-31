@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "**Multi-City Timeline** — це адаптивний фронтенд-додаток (MVP) для планування насичених подорожей, що включають переїзди між кількома містами. Замість хаотичних нотаток у телефоні та розрізнених скріншотів бронювань, додаток збирає всю поїздку в єдину, інтуїтивно зрозумілу хронологічну стрічку (таймлайн).",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -10,7 +11,10 @@
     "test": "vitest",
     "coverage": "vitest --coverage",
     "test:e2e": "playwright test",
-    "test:e2e:ui": "playwright test --ui"
+    "test:e2e:ui": "playwright test --ui",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx,css,md}\""
   },
   "keywords": [],
   "author": "",
@@ -19,7 +23,11 @@
     "@playwright/test": "^1.60.0",
     "@types/node": "^25.9.1",
     "@vitest/coverage-v8": "^4.1.7",
+    "eslint": "^9.39.4",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-prettier": "^5.5.6",
     "jsdom": "^28.1.0",
+    "prettier": "^3.8.3",
     "vite": "^8.0.14",
     "vitest": "^4.1.7"
   }

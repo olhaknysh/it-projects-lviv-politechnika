@@ -11,24 +11,24 @@ export function validateEvent(event) {
   if (!event || !event.title || !event.date || !event.time) {
     throw new Error("Відсутні обов'язкові поля для події");
   }
-  
+
   if (event.endTime && event.endTime < event.time) {
-    throw new Error("Час завершення не може бути ранішим за час початку");
+    throw new Error('Час завершення не може бути ранішим за час початку');
   }
-  
+
   return true;
 }
 
 export function calculateTripDuration(events) {
   if (!events || events.length === 0) return 0;
-  
+
   const sorted = sortEvents(events);
   const start = new Date(sorted[0].date);
   const end = new Date(sorted[sorted.length - 1].date);
-  
+
   const diffTime = Math.abs(end - start);
   const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
-  return diffDays + 1; 
+  return diffDays + 1;
 }
 
 export function saveTripToStorage(tripId, events) {

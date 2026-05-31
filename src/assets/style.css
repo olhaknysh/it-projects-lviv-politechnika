@@ -3,7 +3,9 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-family:
+    -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial,
+    sans-serif;
 }
 
 body {
@@ -15,12 +17,13 @@ body {
 }
 
 /* Контейнер додатку під мобільні пристрої */
-#dashboard-screen, #timeline-screen {
+#dashboard-screen,
+#timeline-screen {
   width: 100%;
   max-width: 480px; /* Ідеально для смартфонів */
   background: #ffffff;
   min-height: 100vh;
-  box-shadow: 0 0 15px rgba(0,0,0,0.05);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
   display: flex;
   flex-direction: column;
 }
@@ -35,14 +38,19 @@ header {
   z-index: 10;
 }
 
-h1, h2 {
+h1,
+h2 {
   font-size: 1.4rem;
   font-weight: 700;
   color: #111827;
 }
 
 /* Кнопки */
-button, .btn-primary, .btn-secondary, .btn-success, .btn-cancel {
+button,
+.btn-primary,
+.btn-secondary,
+.btn-success,
+.btn-cancel {
   padding: 10px 16px;
   border-radius: 8px;
   border: none;
@@ -52,7 +60,8 @@ button, .btn-primary, .btn-secondary, .btn-success, .btn-cancel {
   transition: all 0.2s ease;
 }
 
-#create-trip-btn, .btn-primary {
+#create-trip-btn,
+.btn-primary {
   background-color: #000000; /* Стильний мінімалістичний чорний */
   color: #fff;
 }
@@ -79,12 +88,14 @@ button, .btn-primary, .btn-secondary, .btn-success, .btn-cancel {
   border-radius: 12px;
   padding: 16px;
   margin: 12px 20px;
-  transition: transform 0.2s, box-shadow 0.2s;
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s;
 }
 
 .trip-card:hover {
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
 /* Модальні вікна (Повний екран на мобілках, по центру на десктопі) */
@@ -114,7 +125,7 @@ button, .btn-primary, .btn-secondary, .btn-success, .btn-cancel {
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   padding: 24px;
-  box-shadow: 0 -4px 20px rgba(0,0,0,0.1);
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.1);
 }
 
 @media (min-width: 480px) {
@@ -124,7 +135,8 @@ button, .btn-primary, .btn-secondary, .btn-success, .btn-cancel {
   }
 }
 
-.modal-content h2, .modal-content h3 {
+.modal-content h2,
+.modal-content h3 {
   margin-bottom: 16px;
 }
 
@@ -138,7 +150,9 @@ form label {
   margin-top: 12px;
 }
 
-form input, form select, form textarea {
+form input,
+form select,
+form textarea {
   width: 100%;
   padding: 10px 12px;
   border: 1px solid #d1d5db;
@@ -147,7 +161,8 @@ form input, form select, form textarea {
   outline: none;
 }
 
-form input:focus, form select:focus {
+form input:focus,
+form select:focus {
   border-color: #000000;
 }
 
@@ -196,17 +211,33 @@ form input:focus, form select:focus {
 }
 
 /* Кольорове кодування за типами подій (Картки + Точки на лінії) */
-.event-type-transport { border-left: 5px solid #3b82f6; } /* Синій */
-.event-type-transport::before { background: #3b82f6; }
+.event-type-transport {
+  border-left: 5px solid #3b82f6;
+} /* Синій */
+.event-type-transport::before {
+  background: #3b82f6;
+}
 
-.event-type-accommodation { border-left: 5px solid #f97316; } /* Помаранчевий */
-.event-type-accommodation::before { background: #f97316; }
+.event-type-accommodation {
+  border-left: 5px solid #f97316;
+} /* Помаранчевий */
+.event-type-accommodation::before {
+  background: #f97316;
+}
 
-.event-type-food { border-left: 5px solid #10b981; } /* Зелений */
-.event-type-food::before { background: #10b981; }
+.event-type-food {
+  border-left: 5px solid #10b981;
+} /* Зелений */
+.event-type-food::before {
+  background: #10b981;
+}
 
-.event-type-activity { border-left: 5px solid #8b5cf6; } /* Фіолетовий */
-.event-type-activity::before { background: #8b5cf6; }
+.event-type-activity {
+  border-left: 5px solid #8b5cf6;
+} /* Фіолетовий */
+.event-type-activity::before {
+  background: #8b5cf6;
+}
 
 .event-header {
   display: flex;
