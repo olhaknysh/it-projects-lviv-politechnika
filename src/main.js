@@ -7,4 +7,4 @@ app.innerHTML = `
   </div>
 `;
 
-console.log('Vite успішно запустив додаток! Initial Layout');
+console.log('Vite успішно запустив додаток! Develop change');
