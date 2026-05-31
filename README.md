@@ -1,0 +1,1 @@
+# it-projects-lviv-politechnika
