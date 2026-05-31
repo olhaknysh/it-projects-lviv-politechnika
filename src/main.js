@@ -2,24 +2,6 @@ import './assets/style.css';
 
 console.log('Vite успішно запустив додаток! Develop change');
 
-function renderEventCard(event) {
-  const container = document.getElementById('timeline-container');
-  
-  const card = document.createElement('div');
-  // Важливо: додаємо загальний клас 'event-card' та специфічний для стилей
-  card.className = `event-card event-type-${event.type.toLowerCase()} border p-4 my-2`;
-  
-  card.innerHTML = `
-    <div class="event-header">
-      <span class="time">${event.time}</span>
-    </div>
-    <h4>${event.title}</h4>
-    <p>${event.notes || ''}</p>
-  `;
-  
-  container.appendChild(card);
-}
-
 const addEventBtn = document.getElementById('add-event-btn');
 const createTripBtn = document.getElementById('create-trip-btn');
 const closeModalBtn = document.getElementById('close-modal-btn');
