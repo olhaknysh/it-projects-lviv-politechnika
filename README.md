@@ -34,3 +34,8 @@
 npm install
 
 npm run dev
+
+[![CI/CD Pipeline](https://github.com/olhaknysh/it-projects-lviv-politechnika/actions/workflows/ci-cd.yml/badge.svg)](https://github.com/olhaknysh/it-projects-lviv-politechnika/actions/workflows/ci-cd.yml)
+
+Посилання на прод
+https://it-projects-lviv-politechnika.vercel.app/
