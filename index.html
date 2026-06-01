@@ -1,104 +1,15 @@
 <!DOCTYPE html>
 <html lang="uk">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Multi-City Timeline 🌍</title>
 </head>
+
 <body>
-
-  <div id="app"></div>
-  <h1>Welcome to %VITE_APP_STATUS%</h1>
-
-  <div id="dashboard-screen">
-    <header class="flex justify-between p-4">
-      <h1>Мої подорожі</h1>
-      <button id="create-trip-btn" data-testid="create-trip-button" class="btn-primary">
-        + Нова подорож
-      </button>
-    </header>
-  
-    <main id="trips-list" class="grid gap-4 p-4">
-  
-      <div class="trip-card cursor-pointer border p-4 rounded-lg" data-testid="trip-card-item">
-        <h3>Євротур 2026: Краків-Відень-Загреб</h3>
-        <p>Дати: 23.05.2026 - 28.05.2026</p>
-      </div>
-  
-    </main>
-  
-    <div id="trip-modal" class="modal-backdrop hidden">
-      <form id="trip-form" class="modal-content">
-        <h2>Створити маршрут</h2>
-  
-        <label for="trip-title">Назва подорожі</label>
-        <input type="text" id="trip-title" name="title" placeholder="Наприклад, Осінь у Відні" required />
-  
-        <label for="trip-start-date">Дата початку</label>
-        <input type="date" id="trip-start-date" name="startDate" required />
-  
-        <label for="trip-end-date">Дата завершення</label>
-        <input type="date" id="trip-end-date" name="endDate" required />
-  
-        <div class="actions">
-          <button type="button" id="close-modal-btn" class="btn-cancel">Скасувати</button>
-          <button type="submit" id="save-trip-submit" class="btn-success">Зберегти</button>
-        </div>
-      </form>
-    </div>
-  </div>
-
-  <div id="timeline-screen">
-    <header class="p-4">
-      <a href="#" id="back-to-dashboard">← Назад</a>
-      <h2 id="current-trip-title">Євротур 2026: Краків-Відень-Загреб</h2>
-      <button id="add-event-btn" class="btn-secondary">+ Додати подію</button>
-    </header>
-  
-    <main id="timeline-container" class="timeline-line p-4">
-  
-      <div class="event-card event-type-activity border-l-4 p-4 my-2">
-        <div class="flex justify-between">
-          <span class="time font-bold">13:00</span>
-          <span class="badge">Активності</span>
-        </div>
-        <h4 class="event-title font-semibold">Оренда велосипедів (Загреб)</h4>
-        <p class="notes text-gray-600 text-sm">Заброньовано на 13:00, перевірити зручне взуття</p>
-      </div>
-  
-    </main>
-  
-    <div id="event-modal" class="modal-backdrop hidden">
-      <form id="event-form" class="modal-content">
-        <h3>Нова подія</h3>
-  
-        <label for="event-title">Що планується?</label>
-        <input type="text" id="event-title" required />
-  
-        <label for="event-type">Тип події</label>
-        <select id="event-type">
-          <option value="transport">Транспорт</option>
-          <option value="accommodation">Житло</option>
-          <option value="food">Їжа</option>
-          <option value="activity">Активності</option>
-        </select>
-  
-        <label for="event-date">Дата</label>
-        <input type="date" id="event-date" required />
-  
-        <label for="event-time">Час початку</label>
-        <input type="time" id="event-time" required />
-  
-        <label for="event-notes">Нотатки</label>
-        <textarea id="event-notes" placeholder="Бронювання, адреси тощо..."></textarea>
-  
-        <div class="actions">
-          <button type="submit" id="save-event-submit">Додати у таймлайн</button>
-        </div>
-      </form>
-    </div>
-  </div>
-  <script type="module" src="/src/main.js"></script>
-
+  <div id="root"></div>
+  <script type="module" src="/src/main.jsx"></script>
 </body>
+
 </html>
