@@ -1,5 +1,6 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { usePostHog } from '@posthog/react';
+import * as Sentry from '@sentry/react';
 
 export default function App() {
   const posthog = usePostHog();
@@ -9,6 +10,14 @@ export default function App() {
   const [isTripModalOpen, setTripModalOpen] = useState(false);
   const [isEventModalOpen, setEventModalOpen] = useState(false);
   const [selectedTripId, setSelectedTripId] = useState(null);
+
+  useEffect(() => {
+    Sentry.setUser({
+      id: "12345",
+      email: "ok@example.com",
+      segment: "premium_user" // Приклад кастомного тегу для сегментації
+    });
+  }, []);
 
   // 2. Стейт даних подорожей
   const [trips, setTrips] = useState([
@@ -112,6 +121,8 @@ export default function App() {
           onSubmit={handleAddEvent}
         />
       )}
+
+      <ErrorButton />
     </div>
   );
 }
@@ -285,5 +296,17 @@ function EventModal({ closeModal, onSubmit }) {
         </div>
       </form>
     </div>
+  );
+}
+
+function ErrorButton() {
+  return (
+    <button
+      onClick={() => {
+        throw new Error('This is your first error!');
+      }}
+    >
+      Break the world
+    </button>
   );
 }
